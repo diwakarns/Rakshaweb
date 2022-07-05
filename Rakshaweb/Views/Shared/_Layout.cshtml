@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Raksha</title>
+
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
+          rel="stylesheet" />
+
+    <style>
+        .header_menu_raksha{
+            color:darkgreen !important;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size:18px;
+        }
+        a{
+
+           text-decoration:none !important;
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="navbar navbar-inverse navbar-fixed-top " style="background-color: white">
+        <div class="container">
+            <div class="navbar-header" style="text-align:right !important ">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+
+                </button>-->
+    @*  @Html.ActionLink(<img src= "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+    <!--<a href="@Url.Action("Index", "Home", null)"</a> <img src="~/Images/rakshalogo.png" >
+            </div>
+            <div class="navbar-collapse collapse ">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li >@Html.ActionLink("About", "About", "Home")</li>
+                    <li >@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>-->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="navbar-brand me-2" href="@Url.Action("Index", "Home", null)">
+                <img src="~/Images/rakshalogo.png"
+                     height="50"
+                     alt="Raksha Logo"
+                     loading="lazy"
+                     style="margin-top: -1px;" />
+            </a>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    aria-expanded="false"
+                    data-mdb-target="#navbarRightAlignExample"
+                    aria-controls="navbarRightAlignExample"
+                    aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarRightAlignExample">
+                <!-- Left links -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                    @*  <a class="nav-link active" aria-current="page" href="#">Home</a>*@
+                    <li class="nav-link active nav-item header_menu_raksha">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="nav-link  nav-item header_menu_raksha">@Html.ActionLink("Services", "About", "Home")</li>
+                    <li class="nav-link  nav-item header_menu_raksha">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class="nav-link  nav-item header_menu_raksha">@Html.ActionLink("Cities", "Contact", "Home")</li>
+                    <li class="nav-link  nav-item header_menu_raksha">@Html.ActionLink("Company", "Contact", "Home")</li>
+                    <button type="button" class="btn btn-success me-3 ">
+                        Call US
+                    </button>
+                    <!-- Navbar dropdown -->
+                    <!--<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle"
+       href="#"
+       id="navbarDropdown"
+       role="button"
+       data-mdb-toggle="dropdown"
+       aria-expanded="false">
+        Dropdown
+    </a>-->
+                    <!-- Dropdown menu -->
+                    <!--<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+                <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+        </ul>
+    </li> -->
+
+                </ul>
+                <!-- Left links -->
+            </div>
+
+        </div>
+       
+    </nav>
+    <!-- Navbar -->
+    <div class="container-fluid">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Raksha</p>
+        </footer>
+    </div>
+    <!-- MDB -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
+    @* @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
